@@ -1,0 +1,168 @@
+html,body {
+    /* height: 100%; */
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+    scroll-behavior: smooth; /* Enables smooth scrolling for the entire document */
+  }
+
+h1{
+    margin:25px 0px;
+}
+  
+
+#searchBar {
+    height: 35px;
+    width: 800px;
+    font-size: 1.15rem;
+    padding-left: 35px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.fa-magnifying-glass {
+    position: relative;
+    left: 30px;
+    font-size: 1.15rem;
+}
+
+#titleBar,
+#contentBar {
+    height: 35px;
+    width: 400px;
+    font-size: 1.15rem;
+    padding-left: 15px;
+    border-radius: 1px;
+    outline: none;
+    /* Removes the default browser outline */
+    transition: border-color 0.3s ease-in-out;
+    border: 1px solid black;
+}
+
+#titleBar {
+    border-bottom: none;
+}
+
+#contentBar {
+    height: 265px;
+    border-top: none;
+    resize: none;
+    /* Disable resizing */
+    outline: none;
+}
+
+button {
+    width: 380px;
+    margin-top: 5px;
+}
+
+.mainBox {
+    margin-top: 45px;
+    margin-left: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    /* padding : 0 15px; */
+}
+
+.box {
+    margin: 0 40px 30px 0;
+    height: 250px;
+    width: 330px;
+    border: 1px solid black;
+}
+
+
+
+
+.box {
+    width: 310px;
+    /* Fixed width */
+    height: 250px;
+    /* Fixed height */
+    border: 1px solid #ccc;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.box h3 {
+    margin: 0;
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /* For single-line ellipsis in the title */
+}
+
+.box span {
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+    white-space: pre-wrap;
+    /* Preserve spaces and line breaks */
+    word-wrap: break-word;
+    /* Break long words if needed */
+    display: block;
+    max-height: 200px;
+    /* Limit the height for the content */
+    line-height: 1.5em;
+    /* Line height to adjust spacing */
+}
+
+.box span::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar */
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+.box span {
+    scrollbar-width: none;
+    /* Hide scrollbar for Firefox */
+}
+
+.top {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Vertically center items */
+    position: relative; /* Establish positioning context for absolute children */
+    width: 100%; /* Full width */
+}
+
+.top h3 {
+    position: relative; /* Remove it from the normal flow */
+    flex: 1;
+    left: 35%; /* Center it horizontally */
+    transform: translateX(-50%); /* Adjust to center based on its width */
+    margin: 0; /* Remove default margin */
+    overflow: hidden; /* Hide overflow */
+    text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+    white-space: nowrap; /* Prevent text from wrapping to a new line */
+    max-width: calc(100% - 50px);
+}
+
+.top .icon {
+    margin-left: auto; /* Push icons to the right */
+    display: flex; /* Align icons in a row */
+    justify-content: center;
+    align-items: center;
+}
+
+.top .icon i {
+    margin-right: 10px; /* Space between icons */
+    font-size: 1.2rem; /* Icon size */
+}
+
+#correct {
+    font-size: 1.4rem; /* Specific size for the correct icon */
+}
+.top i{
+    color: black;
+    opacity:0.1;
+    transition: opacity 0.3s ease, font-size 0.2s ease;
+}
+.top i:hover{
+    opacity:0.9;
+}
+#correct:hover{
+    font-size: 1.4rem;
+}
